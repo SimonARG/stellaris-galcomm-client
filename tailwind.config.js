@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{vue,js}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['Noto Sans', 'sans-serif'],
+        'mono': ['Noto Sans Mono', 'monospace'],
+        'orbit': ['Orbitron', 'sans-serif'],
+        'game': ['Barlow', 'sans-serif']
+      },
+    },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  }
 }
