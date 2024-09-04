@@ -5,9 +5,7 @@ const Http = axios.create({
   baseURL: import.meta.env.VITE_API_URL
 })
 
-/**
- * Register axios request interceptor
- */
+// Register axios request interceptor
 Http.interceptors.response.use(
   (response) => {
     // Store token if its part of the response
@@ -50,9 +48,7 @@ Http.interceptors.response.use(
   }
 )
 
-/**
- * Register axios request interceptor
- */
+// Register axios request interceptor
 Http.interceptors.request.use((config) => {
   let token = sessionStorage.apiToken
   if (token) {
